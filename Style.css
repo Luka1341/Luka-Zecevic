@@ -1,0 +1,36 @@
+﻿div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: black;
+    font-family: Arial;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+body {
+    background-color: cyan;
+    padding-bottom: 300px;
+}
+
+table {
+    padding: 200px;
+    border-color: black;
+    border-radius: 30px;
+    border-top: solid 10px;
+    border-left: solid 10px;
+    border-bottom: solid 10px;
+    border-right: solid 10px;
+    padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+tr {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: xx-large;
+}
