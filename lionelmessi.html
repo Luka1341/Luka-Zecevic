@@ -2,7 +2,68 @@
 <html>
 <head>
     <title>Lionel Mesi</title>
-    <link href="appdata/StyleSheet5.css" rel="stylesheet" />
+    <style>
+#naslov {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #f00;
+    text-align: center;
+}
+
+#link {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: large;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+}
+
+body {
+    background-color: #4cff00;
+}
+#centar {
+    text-align: center;
+}
+
+input {
+    background-color: #f00; /* crvena */
+    border-radius: 10px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+    input:hover {
+        opacity: 0.5;
+    }
+.centar {
+    text-align: center;
+}
+
+#footer {
+    padding-top: 100px;
+    text-align: center;
+}
+
+table {
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    </style>
 </head>
 <body>
     <br /><br />
@@ -20,6 +81,14 @@
         <input type="button" value="opacity 0.5" onclick="fun(2);" />
         <input type="button" value="opacity 0" onclick="fun(3);" />
     </div>
-    <script src="appdata/functions3.js"></script>
+    <script>
+    function fun(x) {
+    switch (x) {
+        case 1: document.getElementsByTagName("img")[0].style.opacity = 1; break;
+        case 2: document.getElementsByTagName("img")[0].style.opacity = 0.5; break;
+        case 3: document.getElementsByTagName("img")[0].style.opacity = 0; break;
+    }
+}
+    </script>
 </body>
 </html>
