@@ -2,13 +2,73 @@
 <html>
 <head>
     <title>Srbija</title>
-    <link href="appdata/StyleSheet1.css" rel="stylesheet" />
+    <style>
+        ﻿body {
+    background-image: url('../slike/mapabalkana.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+#naslov {
+    font-family: Arial;
+    color: blue;
+    font-size: xx-large;
+    font-weight: bold;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+    left: 708px;
+    top: 32px;
+}
+
+#nazivsrbija {
+    font-family: Arial;
+    color: red;
+    font-size: x-large;
+    font-weight: bold;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+    left: 574px;
+    top: 224px;
+    cursor: pointer;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    position: fixed;
+    margin-top: 0px;
+    margin-left: 0px;
+    left: 564px;
+    top: 266px;
+    cursor: pointer;
+}
+    </style>
 </head>
 <body>
     <div id="naslov">SRBIJA I NJENI SUSEDI</div>
     <div id="nazivsrbija" onclick="fun(1)">SRBIJA</div>
-    <img src="slike/Srbija.jpg" onmouseover="fun(2);" onmouseout="fun(3);" />
-    <audio src="audio/Srbija.mp3" />
-    <script src="appdata/functions.js"></script>
+    <img src="Srbija.jpg" onmouseover="fun(2);" onmouseout="fun(3);" />
+    <audio src="Srbija.mp3" />
+    <script>
+        function fun(x) {
+    switch (x) {
+        case 1:
+            var x = window.open("", "", "height=200px, width=400px,top=500,left = 500" );
+            x.document.write("<p><b>Naziv drzave :</b> Republika Srbija</p>");
+            x.document.write("<p><b>Glavni grad :</b> Beograd</p>");
+            x.document.write("<p><b>Broj stanovnika :</b> 9.024.734</p>");
+            x.document.write("<p><b>Povrsina :</b> 88,361km<sup>2</sup></p>");
+            x.document.body.style.color = "#ffffff";
+            x.document.body.style.backgroundColor = "#ff0000";
+            break;
+        case 2: document.getElementsByTagName("audio")[0].play(); break;
+        case 3: document.getElementsByTagName("audio")[0].pause();
+            document.getElementsByTagName("audio")[0].currentTime = 0;
+            break;
+    }
+}
+    </script>
 </body>
 </html>
