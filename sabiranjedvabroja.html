@@ -3,7 +3,42 @@
 <head>
     <title></title>
     <meta charset=”utf-8″ />
-    <link href="appdata/StyleSheet7.css" rel="stylesheet" />
+    <style>
+#centar {
+    text-align: center;
+}
+
+#naslov {
+    font-family: Arial;
+    color: #2824be;
+    font-size: xx-large;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    font-style: italic;
+    color: red;
+}
+
+#button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #2824be;
+    color: #fff;
+}
+
+.tekst {
+    font-style: italic;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input {
+    margin-top: 40px;
+}
+        </style>
 </head>
 <body>
     <div id="centar">
@@ -19,6 +54,11 @@
         <label>Rezultat X + Y = </label>
         <input type="text" readonly="readonly" />
     </div>
-    <script src="appdata/functions5.js"></script>
+    <script>﻿function fun() {
+    var x = parseInt(document.getElementsByClassName("tekst")[0].value);
+    var y = parseInt(document.getElementsByClassName("tekst")[1].value);
+    document.getElementsByTagName("input")[3].value = x + y;
+}
+    </script>
 </body>
 </html>
