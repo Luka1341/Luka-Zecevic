@@ -2,7 +2,58 @@
 <html>
 <head>
     <title>Calculator</title>
-    <link href="appdata/StyleSheet4.css" rel="stylesheet" />
+    <style>
+        ﻿#naslov {
+    font-family: Arial;
+    font-size: xx-large;
+    color: blue;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#podnaslov {
+    color: red;
+    text-align: center;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+table {
+    width: 100%;
+}
+
+.levo {
+    width: 50%;
+    text-align: right;
+}
+
+.desno {
+    width: 50%;
+}
+
+#centar {
+    text-align: center;
+}
+
+tr {
+    height: 40px;
+}
+
+label {
+    font-style: italic;
+    color: #0026ff;
+    font-size: 18px;
+}
+
+#dugme {
+    padding: 10px 20px;
+    background-color: #0026ff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+    </style>
 </head>
 <body>
     <div id="naslov">KALKULATOR</div>
@@ -50,6 +101,29 @@
             <td><input id="rez" type="text" readonly="readonly" /></td>
         </tr>
     </table>
-    <script src="appdata/functions2.js"></script>
+    <script>
+        ﻿function fun() {
+    var x = parseInt(document.getElementById("broj1").value);
+    var y = parseInt(document.getElementById("broj2").value);
+    var operacija = document.getElementById("operacija").value;
+    if ((y == 0) && (operacija = "/"))
+        alert("Nije moguce deljenje sa nulom")
+    else
+        switch (operacija) {
+            case "+": document.getElementById("rez").value = x + y; break;
+            case "*": document.getElementById("rez").value = x * y; break;
+            case "/": document.getElementById("rez").value = (x / y).toFixed(2);
+                break;
+            default: alert("Niste izabrali operaciju!!!");
+        }
+    setTimeout(brisi, 2000);
+}
+function brisi() {
+    document.getElementById("broj1").value = "";
+    document.getElementById("broj2").value = "";
+    document.getElementById("operacija").value = "nista";
+    document.getElementById("rez").value = "";
+}
+    </script>
 </body>
 </html>
