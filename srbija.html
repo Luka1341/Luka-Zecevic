@@ -2,7 +2,78 @@
 <html>
 <head>
     <title>Srbija</title>
-    <link href="appdata/StyleSheet9.css" rel="stylesheet" />
+    <style>
+body {
+    background-color :#01ffff;
+}
+
+#naslov {
+    font-family :Arial;
+    font-size :xx-large;
+    color: blue;
+    text-align :center;
+    margin-top :50px;
+    margin-bottom :50px;
+    font-weight :bold;
+}
+
+#linkovi {
+    text-align :center;
+}
+
+a {
+    color: blue;
+    padding: 5px;
+    font-size :large;
+    font-style :italic;
+    text-decoration :none;
+}
+
+#podnaslov {
+    margin-top :20px;
+    font-size :large;
+    color: red;
+    text-align :center;
+    margin-bottom :80px;
+    font-style :italic;
+}
+
+img {
+    display: block;
+    margin-left :auto;
+    margin-right :auto;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top :50px;
+    font-size :large;
+    font-style :italic;
+}
+
+.levo {
+    width: 50%;
+    text-align :right;
+    color: #0026ff;
+}
+
+.desno {
+    width: 50%;
+    text-align :left;
+    color: #ff0000;
+}
+
+tr {
+    height: 35px;
+}
+
+p {
+    padding: 10px 70px;
+    font-size :large;
+    font-style :italic;
+}
+    </style>
 </head>
 <body>
     <div id="naslov">SRBIJA</div>
@@ -13,9 +84,20 @@
     <div id="podnaslov">
         Pritisni na zastavu za ispis podataka o Srbiji ...
     </div>
-    <img src="slike/Srbija.jpg" onclick="fun(1);" onmouseover="fun(2);" onmouseout="fun(3);" />
-    <audio src="audio/Srbija.mp3" id="srbijazvuk" />
+    <img src="Srbija.jpg" onclick="fun(1);" onmouseover="fun(2);" onmouseout="fun(3);" />
+    <audio src="Srbija.mp3" id="srbijazvuk" />
 
-    <script src="appdata/functions7.js"></script>
+    <script>﻿function fun(x) {
+    switch (x) {
+        case 1:
+            window.open("https://sr.wikipedia.org/wiki/%D0%A1%D1%80%D0%B1%D0%B8%D1%98%D0%B0");
+            break;
+        case 2: document.getElementById("srbijazvuk").play(); break;
+        case 3: document.getElementById("srbijazvuk").pause();
+            document.getElementById("srbijazvuk").currentTime = 0;
+            break;
+    }
+}
+    </script>
 </body>
 </html>
