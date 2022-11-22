@@ -2,18 +2,97 @@
 <html>
 <head>
     <title>НОВАК ЂОКОВИЋ</title>
-    <link href="appdata/StyleSheet6.css" rel="stylesheet" />
+    <style>
+body {
+    background-color: #0ff;
+}
+
+#naslov {
+    text-align: center;
+    color: red;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 50px;
+    opacity: 1;
+}
+
+#link {
+    text-align: center;
+    font-size: large;
+    margin-top: 50px;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+#centar {
+    text-align: center;
+}
+
+input {
+    padding: 10px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+}
+.centar {
+    text-align:center;
+}
+#footer {
+    padding-top:100px;
+    text-align:center;
+}
+table {
+    padding: 30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+    </style>
 </head>
 <body>
     <div id="naslov">НОВАК ЂОКОВИЋ</div>
     <div id="link">
         <a href="oautoru2.html">O aутору</a>
     </div>
-    <img src="slike/novak.jpg" />
+    <img src="novak.jpg" />
     <div id="centar">
         <input type="button" value="Fade In" onclick="fadein();" />
         <input type="button" value="Fade Out" onclick="fadeout();" />
     </div>
-    <script src="appdata/functions4.js"></script>
+    <script>
+    ﻿var transparentnost = 1;
+window.onload = function () {
+    document.getElementById("naslov").style.opacity = 1;
+}
+function fadeout() {
+    document.getElementsByTagName("img")[0].style.opacity = transparentnost;
+    if (transparentnost <= 0) return;
+    transparentnost -= 0.01; //100x
+    setTimeout(fadeout, 20); //20ms
+}
+function fadein() {
+    document.getElementsByTagName("img")[0].style.opacity = transparentnost;
+    if (trаansparentnost >= 1) return;
+    transparentnost += 0.01; //100x
+    setTimeout(fadein, 20); //20ms
+}
+    </script>
 </body>
 </html>
