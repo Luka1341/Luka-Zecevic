@@ -3,7 +3,103 @@
 <head>
     <meta charset="utf-8" />
     <title>Turistička agencija "Planinar"</title>
-    <link href="appdata/StyleSheet10.css" rel="stylesheet" />
+    <style>
+body {
+    background-image: url('../slike/nebo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: Arial;
+    text-align: center;
+}
+
+#naslov {
+    font-size :xx-large;
+    color: #f16121;
+    font-weight :bold;
+    margin-top :30px;
+}
+
+table {
+    margin-left :auto;
+    margin-right :auto;
+    margin-top :50px;
+    margin-bottom :50px;
+    height: 50px;
+    border-collapse :collapse;
+}
+
+.selektovan {
+    width: 200px;
+    background-color :#f16121;
+    text-align :center;
+}
+
+.neselektovan {
+    width: 200px;
+    background-color :#ffffff;
+    text-align :center;
+}
+
+a {
+    text-decoration :none;
+}
+
+#bela {
+    color: white;
+}
+
+.plava {
+    color: blue;
+}
+
+#linija {
+    border-left :solid 2px #f16121;
+    border-right :solid 2px #f16121;
+}
+
+#container {
+    margin-left :auto;
+    margin-right :auto;
+    width: 600px;
+    height: 850px;
+    background-color :white;
+    opacity: 0.7;
+}
+
+#selekcija {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+label {
+    padding-right :20px;
+}
+select {
+    padding: 5px;
+    background-color: #bfbdbd;
+    border-radius: 7px;
+}
+
+iframe {
+    width: 500px;
+    height: 600px;
+}
+
+#footer {
+    padding: 50px 0px;
+    color: #f16121;
+    font-size: large;
+}
+
+.autor {
+    padding: 20px;
+}
+
+p {
+    padding: 0px 40px;
+}
+    </style>
 </head>
 <body>
     <div id="naslov">Turistička agencija "Planinar"</div>
@@ -42,6 +138,23 @@
     </div>
     <div id="footer">&copy Turistička agencija "Planinar"</div>
 
-    <script src="appdata/functions8.js"></script>
+    <script>
+    function fun(x) {
+    var url = "https://naslovi.net/vremenska-prognoza/" + x;
+    document.getElementsByTagName("iframe")[0].src = url;
+    switch (x) {
+        case "beograd": window.open("../gradovi/beograd.html", "", "width=400px,height = 300px, top = 600px, left = 900px"); break;
+        case "nis": window.open("../gradovi/nis.html", "", "width=400px, height=300px,top = 600px, left = 900px"); break;
+        case "valjevo": window.open("../gradovi/valjevo.html", "", "width=400px,height = 300px, top = 600px, left = 900px"); break;
+        case "bor": window.open("../gradovi/bor.html", "", "width=400px, height=300px,top = 600px, left = 900px"); break;
+        case "pancevo": window.open("../gradovi/pancevo.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+        case "subotica": window.open("../gradovi/subotica.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+        case "vranje": window.open("../gradovi/vranje.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+        case "ruma": window.open("../gradovi/ruma.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+        case "cacak": window.open("../gradovi/cacak.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+        case "jagodina": window.open("../gradovi/jagodina.html", "", "width=400px, height = 300px, top = 600px, left = 900px"); break;
+ }
+}
+    </script>
 </body>
 </html>
